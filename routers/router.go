@@ -7,6 +7,7 @@ import (
 )
 
 func init() {
-	beego.BConfig.WebConfig.Session.SessionOn = true
+
 	beego.Router("/", &controllers.MainController{})
+	beego.Router("/teste", &controllers.NovoController{}, "get:Testa")
 }
